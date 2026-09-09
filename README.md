@@ -1,9 +1,3 @@
-<p align="center">
-  <a href="https://yeelen.cg/gh/">
-    <img src="https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/apps/client/src/assets/icons/icon-512x512.png" alt="Ghostfolio Logo" width="130" />
-  </a>
-</p>
-
 <h1 align="center">Ghostfolio — Open Source Wealth Management & Portfolio Tracker</h1>
 
 <p align="center">
@@ -31,10 +25,6 @@
 **Ghostfolio** is a modern, privacy-focused, open-source personal finance and wealth management application. It empowers individuals to track their financial portfolio, monitor asset allocation, calculate investment returns, and analyze net worth over time without compromising sensitive personal data.
 
 Whether you are managing stocks, ETFs, mutual funds, real estate, cash accounts, or cryptocurrencies, Ghostfolio delivers a comprehensive, data-driven financial dashboard built for security, autonomy, and ease of use.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/apps/client/src/assets/icons/icon-512x512.png" alt="Ghostfolio Financial Dashboard Preview" width="220" />
-</p>
 
 ---
 
