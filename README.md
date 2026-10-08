@@ -1,30 +1,93 @@
-# Security Policy
+# Contributing to Ghostfolio
 
-## Reporting a Vulnerability
+First off, thank you for considering contributing to Ghostfolio! It's people like you that make Ghostfolio such a great open-source wealth management platform for everyone.
 
-The Ghostfolio project team and community take the security of our application and the privacy of our users very seriously. If you discover a security vulnerability, we appreciate your help in disclosing it to us responsibly.
+This document provides a set of guidelines and best practices for contributing to the repository.
 
-**Please DO NOT open a public GitHub Issue to report a security vulnerability.**
+---
 
-Instead, please report vulnerabilities by emailing our core team directly at **security@ghostfol.io** or by submitting a private security advisory on GitHub.
+## 📜 Table of Contents
 
-### Please include the following details in your report:
-* A description of the vulnerability and its potential impact.
-* Detailed steps to reproduce the issue (including proof-of-concept scripts, code snippets, or screenshots where applicable).
-* The affected component, API endpoint, or application version.
-* Any potential mitigations or fixes you might have identified.
+- [Code of Conduct](#-code-of-conduct)
+- [How Can I Contribute?](#-how-can-i-contribute)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Pull Requests](#pull-requests)
+- [Development Setup](#-development-setup)
+- [Coding Standards & Style Guide](#-coding-standards--style-guide)
 
-## Vulnerability Response Process
+---
 
-1. **Acknowledgment:** We will acknowledge receipt of your vulnerability report within 48 hours.
-2. **Assessment:** Our team will investigate and verify the reported issue to determine its severity and scope.
-3. **Fix & Patch:** Once confirmed, we will prepare a fix. Critical security patches are prioritized for release.
-4. **Public Disclosure:** After a fix has been deployed and released, we will credit you in the release notes (unless you prefer to remain anonymous) and publish a security advisory.
+## 📜 Code of Conduct
 
-## Security Best Practices for Self-Hosting
+By participating in this project, you are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md). Please report unacceptable behavior directly via GitHub's reporting features.
 
-If you are self-hosting Ghostfolio, we strongly recommend following these guidelines:
-* **Keep Updated:** Always run the latest stable Docker container tag or version release.
-* **Environment Variables:** Secure your `.env` file and ensure sensitive variables (such as `JWT_SECRET_KEY`) use strong, randomly generated keys.
-* **Reverse Proxy:** Run Ghostfolio behind a secure reverse proxy (e.g., Nginx, Traefik, Caddy) with SSL/TLS encryption enabled (`HTTPS`).
-* **Database Access:** Restrict external network access to your PostgreSQL database instance.
+---
+
+## 🛠️ How Can I Contribute?
+
+### Reporting Bugs
+
+Before creating a bug report, please check the [FAQ](FAQ.md) and existing GitHub Issues to see if the problem has already been reported or answered.
+
+When opening a bug report, please include:
+* **A clear and descriptive title.**
+* **Steps to reproduce the issue** step-by-step.
+* **Expected vs. actual behavior.**
+* **Environment details:** Node.js version, Docker setup, OS, browser, and Ghostfolio version.
+* Relevant logs or screenshots (ensure no sensitive financial or personal data is visible).
+
+### Suggesting Enhancements
+
+Feature requests and enhancement ideas are always welcome! When submitting a feature suggestion, please describe:
+* The specific problem or use case the feature addresses.
+* How you envision the feature working within the existing dashboard UI/UX.
+* Any alternative solutions or workarounds considered.
+
+### Pull Requests
+
+1. **Fork the Repository:** Create your own fork of the project.
+2. **Create a Feature Branch:** Branch off from `main` (e.g., `feature/add-new-broker-importer` or `fix/dividend-yield-calculation`).
+3. **Commit Your Changes:** Write clear, concise commit messages following the Conventional Commits specification.
+4. **Run Tests:** Ensure all unit tests, linters, and type-checks pass locally.
+5. **Submit PR:** Open a Pull Request against the `main` branch of this repository.
+
+---
+
+## 💻 Development Setup
+
+To run Ghostfolio locally for development:
+
+1. **Prerequisites:**
+   * Node.js v18 LTS or v20 LTS
+   * npm / yarn
+   * Docker Desktop (for local PostgreSQL & Redis)
+
+2. **Clone & Install Dependencies:**
+   ```bash
+   git clone https://github.com/ghostfolio/ghostfolio.git
+   cd ghostfolio
+   npm install
+   ```
+
+3. **Configure Environment:**
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Start Local Services & App:**
+   ```bash
+   docker compose up -d postgres redis
+   npm run start:dev
+   ```
+
+---
+
+## 🎨 Coding Standards & Style Guide
+
+To maintain code quality across the repository:
+
+* **TypeScript:** Write strict TypeScript code without using `any` types wherever possible.
+* **Formatting:** Use Prettier and ESLint configurations provided in the repository (`npm run lint`).
+* **Testing:** Write unit tests for new features and bug fixes (`npm run test`).
+* **Clean Commits:** Keep commits focused on a single change or feature.
