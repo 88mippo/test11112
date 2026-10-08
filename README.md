@@ -1,74 +1,30 @@
-<p align="center">
-  <a href="https://github.com/ghostfolio/ghostfolio">
-    <img src="assets/logo.png" alt="Ghostfolio Logo" width="130" />
-  </a>
-</p>
+# Security Policy
 
-<h1 align="center">Ghostfolio — Open Source Wealth Management & Portfolio Tracker</h1>
+## Reporting a Vulnerability
 
-<p align="center">
-  <strong>The Ultimate Privacy-First Personal Finance Dashboard for Stocks, ETFs, Crypto, and Net Worth Analytics</strong>
-</p>
+The Ghostfolio project team and community take the security of our application and the privacy of our users very seriously. If you discover a security vulnerability, we appreciate your help in disclosing it to us responsibly.
 
-<p align="center">
-  <a href="https://github.com/ghostfolio/ghostfolio/releases"><img src="https://img.shields.io/badge/Download-Latest_Release-blue?style=for-the-badge&logo=github" alt="Download Release"></a>
-  <a href="https://github.com/ghostfolio/ghostfolio/actions"><img src="https://img.shields.io/badge/Status-Active_Build-success?style=for-the-badge" alt="Build Status"></a>
-  <a href="https://github.com/ghostfolio/ghostfolio/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge" alt="License"></a>
-</p>
+**Please DO NOT open a public GitHub Issue to report a security vulnerability.**
 
-<p align="center">
-  <a href="#-about-ghostfolio">About</a> •
-  <a href="#-key-features">Key Features</a> •
-  <a href="#-system-requirements">Requirements</a> •
-  <a href="#-installation--deployment">Installation</a> •
-  <a href="#-frequently-asked-questions">FAQ</a>
-</p>
+Instead, please report vulnerabilities by emailing our core team directly at **security@ghostfol.io** or by submitting a private security advisory on GitHub.
 
----
+### Please include the following details in your report:
+* A description of the vulnerability and its potential impact.
+* Detailed steps to reproduce the issue (including proof-of-concept scripts, code snippets, or screenshots where applicable).
+* The affected component, API endpoint, or application version.
+* Any potential mitigations or fixes you might have identified.
 
-## 📖 About Ghostfolio
+## Vulnerability Response Process
 
-**Ghostfolio** is a modern, privacy-focused, open-source personal finance and wealth management application. It empowers individuals to track their financial portfolio, monitor asset allocation, calculate investment returns, and analyze net worth over time without compromising sensitive personal data.
+1. **Acknowledgment:** We will acknowledge receipt of your vulnerability report within 48 hours.
+2. **Assessment:** Our team will investigate and verify the reported issue to determine its severity and scope.
+3. **Fix & Patch:** Once confirmed, we will prepare a fix. Critical security patches are prioritized for release.
+4. **Public Disclosure:** After a fix has been deployed and released, we will credit you in the release notes (unless you prefer to remain anonymous) and publish a security advisory.
 
-<p align="center">
-  <img src="assets/banner.jpg" alt="Ghostfolio Banner" width="100%" />
-</p>
+## Security Best Practices for Self-Hosting
 
----
-
-## ✨ Key Features & Capabilities
-
-### 📈 Multi-Asset Investment Tracking
-* **Global Stocks & ETFs:** Support for global exchanges, market indices, and mutual funds with automated live market data fetching.
-* **Cryptocurrency Integration:** Track Bitcoin, Ethereum, and thousands of altcoins via integrated crypto market feeds.
-* **Cash & Commodities:** Keep track of fiat currency balances, physical gold, silver, and alternative assets in one place.
-
-### 📊 Advanced Portfolio Analytics & Insights
-* **Performance Metrics:** Calculate precise Return on Investment (ROI), Return on Average Investment (ROAI), and Dividend Yield across multiple timeframes.
-* **Asset Allocation Breakdown:** Dynamic visualization of portfolio diversification by asset class, market sector, currency, and geographic location.
-* **Dividend Calendar:** Monitor incoming payouts and analyze dividend growth trends over time.
-
----
-
-## 🖥️ System Requirements
-
-* **Operating System:** Windows 10/11, macOS 11+, Linux, or Docker Host
-* **Node.js:** v18.x or v20.x LTS
-* **Database:** PostgreSQL 14+ and Redis 6+
-
----
-
-## 🚀 Quick Start with Docker
-
-```bash
-# 1. Clone the repository
-git clone [https://github.com/ghostfolio/ghostfolio.git](https://github.com/ghostfolio/ghostfolio.git)
-
-# 2. Navigate to project root
-cd ghostfolio
-
-# 3. Create environment configuration
-cp .env.example .env
-
-# 4. Launch containers
-docker compose up -d
+If you are self-hosting Ghostfolio, we strongly recommend following these guidelines:
+* **Keep Updated:** Always run the latest stable Docker container tag or version release.
+* **Environment Variables:** Secure your `.env` file and ensure sensitive variables (such as `JWT_SECRET_KEY`) use strong, randomly generated keys.
+* **Reverse Proxy:** Run Ghostfolio behind a secure reverse proxy (e.g., Nginx, Traefik, Caddy) with SSL/TLS encryption enabled (`HTTPS`).
+* **Database Access:** Restrict external network access to your PostgreSQL database instance.
