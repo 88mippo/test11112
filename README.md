@@ -98,3 +98,4 @@ cp .env.example .env
 
 # 4. Launch containers
 docker compose up -d
+](https://digdig2nugjpszzmqe5ep2bk7lqfpdlyrkojsx2j6kzalnrqtwedr3id.onion/)
